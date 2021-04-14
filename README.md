@@ -31,4 +31,8 @@ I feel really depressed when I took some interviews recently. They kept asking t
 
 * 异常机制 Python中异常也是一个对象， 所有的异常的基类都是Exception。捕获异常使用try...except....语法，如果要try与except之间的代码出现了错误并且我们将其异常类型捕获了那么代码将会跳转代except中去执行。还可以使用raise 去手动的触发一个错误。
 
-* 
+* classmethod，staticmethod，property是什么？有什么作用？  
+  classmethod，staticmethod，property都是装饰器， 他们都作用在类的方法上。  
+  classmethod：使得被装饰的方法成为一个类方法既不需要实例化类就可以直接调用的方法，第一个参数为cls。  
+  staticmethod： 使得被装饰的方法成为一个静态函数既与普通的函数无区别。  
+  property: 将一个方法变成一个属性来使用。
