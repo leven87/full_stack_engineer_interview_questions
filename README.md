@@ -35,4 +35,24 @@ I feel really depressed when I took some interviews recently. They kept asking t
   classmethod，staticmethod，property都是装饰器， 他们都作用在类的方法上。  
   classmethod：使得被装饰的方法成为一个类方法既不需要实例化类就可以直接调用的方法，第一个参数为cls。  
   staticmethod： 使得被装饰的方法成为一个静态函数既与普通的函数无区别。  
-  property: 将一个方法变成一个属性来使用。
+  property: 将一个方法变成一个属性来使用。 
+  
+* python中的绑定方法和未绑定方法是什么？  
+  绑定方法：绑定了实例化的方法既第一个参数是self。未绑定方法：没有绑定实例化的方法既类方法、静态方法  
+  
+* python上下文管理器和with 
+  Python中上下文管理器使用with来调用主要用于数据库连接，文件操作， 网络操作。  
+  其作用是： 如果在进行一些打开资源操作时出现了异常，上下文管理器将会自动的执行一些资源清理操作。 
+  参看： https://zhuanlan.zhihu.com/p/24709718
+  
+* functools的wraps是做什么的？ 
+  wraps是一个装饰器功能是： 由于被装饰的函数传入到装饰器中时已经不是原函数了， 而是一个新的函数， 并且丢失一些原函数的属性， 为了不影响函数的使用， 可以使用wraps来抵消这种副作用。
+  
+* python的ORM
+  ORM（Object Relational Mapping）即对象关系映射，主要用于将对象映射成SQL语句。通过python中的属性描述符协议实现， 在给这个属性进行赋值时（对应数据库中的字段名称）会调用__set__方法，访问  属性则会调用__get__方法删除则调用__delete__方法。
+  
+* 生成器和迭代器的区别
+  生成器时一种特殊的迭代器， 生成器自动实现了迭代器协议， 不需要手动的实现__iter__以及next方法，生成器在迭代的过程中可以改变当前的迭代值， 而普通的迭代器改变当前值时往往会发生错。迭代器必须实现__iter__以及next方法。
+  
+*  
+   
