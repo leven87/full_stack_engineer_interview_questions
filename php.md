@@ -161,3 +161,15 @@ Mysql_fetch_row()是从结果集中取出一行作为枚举数组，mysql_fetch_
 * __tostring()当输出一个对象时自动调用的方法
 
 
+#### 解释一下PHP8的JIT编译器 可参考： https://www.zend.com/blog/exploring-new-php-jit-compiler   
+When we looked originally at the OPcache, we found it removed the parsing and compilation steps that gave us opcodes for the VM. However, the VM still needed to compile these to native machine code.     
+
+What JIT does is allow an extra layer of caching: caching of the native machine code. When JIT has handled code previously, we go directly from identifying the script to use, to executing the native machine code.   
+
+#### 安装php8 参考： https://www.tecmint.com/install-php-8-on-centos/  
+其中用到dnf, 这个新一代的包管理器，替代yum。
+
+#### magic_quotes_gpc的详细使用方法
+php中的magic_quotes_gpc是配置在php.ini中的，他的作用类似addslashes()，就是对输入的字符创中的字符进行转义处理。他可以对$_POST、$\__GET以及进行数据库操作的sql进行转义处理，防止sql注入。
+
+
