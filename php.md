@@ -172,4 +172,16 @@ What JIT does is allow an extra layer of caching: caching of the native machine 
 #### magic_quotes_gpc的详细使用方法
 php中的magic_quotes_gpc是配置在php.ini中的，他的作用类似addslashes()，就是对输入的字符创中的字符进行转义处理。他可以对$_POST、$\__GET以及进行数据库操作的sql进行转义处理，防止sql注入。
 
+#### 用PHP打印出前一天的时间，打印格式是2007年5月10日22:21:21   
+Echo date(‘Y-m-d H:i:s’,strtotime(‘-1 day’));  
+
+#### 把 John 新增到 users 阵列？  
+$users[] = ‘john’; array_push($users,‘john’);  
+
+#### php字符串相关函数
+* strtotime ( string $datetime , int|null $baseTimestamp = null )  将字符串格式的日期转为时间戳格式
+* explode(“_”,$str); 字符串转数组
+* implode("",$arr) 数组转字符串
+
+
 
